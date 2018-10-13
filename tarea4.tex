@@ -156,7 +156,8 @@
 			El área de un triángulo es $\frac{b\cdot h}{2}$. \\
 			En este caso la base está fija como $b = \sqrt{(2-3)^2+(1-1)^2} = 1$.\\
 			Y cómo la base es paralela al eje $x$, ambas entradas son 1,
-			entonces la altura del triángulo sería $y_z-1, z = (x_z, y_z)$.
+			entonces la altura del triángulo sería la altura del punto menos la
+			altura de la base, o sea $y_z-1, z = (x_z, y_z)$.
 			De estas dos cosas, $A = \frac{b \cdot h}{2} = \frac{1 \cdot(y_z-1)}{2}
 			= \frac{y_z-1}{2}$
 			\begin{enumerate}
@@ -174,9 +175,10 @@
 						  &\implies y_z-1 \leq \frac{1}{2}\\
 						  &\implies y_z \leq \frac{3}{2}
 					\end{align*}
-					Entonces, ese conjunto de puntos son $\{(x, y) | y = \frac{3}{2}\}$
+					Entonces, ese conjunto de puntos son $\{(x, y) | y \leq \frac{3}{2}\}$
 					y están dentro del cuadrado.\\
-					Forman una línea paralela al eje $x$ dentro del cuadrado.
+					Forman una rectángulo dentro del cuadrado con base igual a
+					la del cuadrado y altura $\frac{3}{2}$.
 				}
 				\item {
 					Encuentre la función de densidad de $A$.\\
@@ -211,9 +213,9 @@
 			Donde $Y$ es una variable aleatoria con función de densidad
 			\[
 				f_Y(y) = \begin{cases}
-								k(1-y)^4, $ si $ 0 < y < 1\\
-								0, $ en otro caso$
-							  \end{cases}
+							k(1-y)^4, $ si $ 0 < y < 1\\
+							0, $ en otro caso$
+						 \end{cases}
 			\]
 			Donde $k$ es constante. ¿Cuál es la probabilidad de que $V$ exceda 10,000?\\
 			Esto sería
@@ -311,9 +313,9 @@
 			Sea $X$ una variable aleatoria con función de densidad dada por
 			\[
 				f_X(x) = \begin{cases}
-									4x^3, $ si $ 0 < x < 1\\
-									0, $ en otro caso$
-								 \end{cases}
+							4x^3, $ si $ 0 < x < 1\\
+							0, $ en otro caso$
+						 \end{cases}
 			\]
 			Encuentre $P(X \leq \frac{2}{3}|X > \frac{1}{3})$.
 		}
