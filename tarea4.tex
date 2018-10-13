@@ -39,6 +39,7 @@
 	\setlength{\headsep}{5pt}
 
 	\begin{enumerate}
+		%Ejercicio 1
 		\item {
 			Sea $A$ un evento $(A \in F)$. Definimos $X$ por
 			\[
@@ -50,9 +51,11 @@
 			\]
 			¿Es $X$ variable aleatoria?
 		}
+		
+		%Ejercicio 2
 		\item {
 			Considere un espacio de probabilidad $\Omega = \{1, 2, 3, 4, 5, 6\}$ y
-			$F = \{\emptyset, \Omega, \{2, 4, 6\}, \{1, 3, 4\}\}$.\\
+			$F = \{\emptyset, \Omega, \{2, 4, 6\}, \{1, 3, 5\}\}$.\\
 			Sean $X_1, X_2 : \Omega \rightarrow \mathbb{R}$ definidas como
 			\begin{align*}
 				X_1(\omega) = \omega^2 & X_2(\omega) = \begin{cases}
@@ -62,6 +65,8 @@
 			\end{align*}
 			¿Son $X_1$ y $X_2$ variables aleatorias en este espacio de probabilidad?
 		}
+		
+		%Ejercicio 3		
 		\item {
 			Sea $f$ una función definida por
 			\[
@@ -82,6 +87,8 @@
 				}
 			\end{enumerate}
 		}
+		
+		%Ejercicio 4
 		\item {
 			Sea $f$ una función definida por
 			\[
@@ -92,6 +99,8 @@
 			\]
 			En donde $0 < r < 1$. Encuentre $c$ para que $f$ sea función de densidad.
 		}
+		
+		%Ejercicio 5
 		\item {
 		La función de densidad de una variable aleatoria $X$ es
 		\[f_X(x) = \gamma x^2 e^{-kx}\mathbb{I}_{(0, \infty)}\]
@@ -109,6 +118,8 @@
 			}
 		\end{enumerate}
 		}
+		
+		%Ejercicio 6
 		\item {
 			Sea
 			\[
@@ -122,10 +133,14 @@
 			\]
 			Donde $0 < \beta < 1$. Encontrar la función de distribución $F_X$
 		}
+		
+		%Ejercicio 7
 		\item {
 			Demuestre que $f_X(x) = \frac{1}{2}e^{-|x|}\mathbb{I}_\mathbb{R}(x)$ es
 			una función de densidad.
 		}
+		
+		%Ejercicio 8
 		\item {
 			Sea $X$ una variable aleatoria con función de densidad
 				\[f_\gamma(y) = cy \mathbb{I}_{\{1, 2, 3, 4\}}(y)\]
@@ -139,6 +154,8 @@
 					}
 				\end{enumerate}
 		}
+		
+		%Ejercicio 9
 		\item {
 			Sea $X$ una variable aleatoria continua con función de densidad
 				\[
@@ -149,6 +166,8 @@
 				\]
 			Calcule $P(|X-\frac{1}{2}| > \frac{1}{4})$.
 		}
+		
+		%Ejercicio 10
 		\item {
 			Suponga que se selecciona aleatoriamente un punto $z$ del cuadrado con
 			esquinas (2, 1), (3, 1), (2, 2,) y (3, 2). Sea $A$ la variable aleatoria
@@ -168,6 +187,8 @@
 				}
 			\end{enumerate}
 		}
+		
+		%Ejercicio 11
 		\item {
 			Una póliza de seguros cubre las reclamaciones médicas de los empleados
 			de una pequeña compañía.\\
@@ -182,6 +203,8 @@
 			\]
 			Donde $k$ es constante. ¿Cuál es la probabilidad de que $V$ exceda 10000?
 			}
+			
+		%Ejercicio 12
 		\item {
 			Una urna contiene 5 bolas rojas y 5 bolas azules. Se realiza un juego
 			que consiste en extraer aleatoriamente 2 bolas de la urna. Suponga que
@@ -190,11 +213,46 @@
 			persona participa en el juego dos veces, calcule la probabilidad de que
 			la ganancia de esta persona sea mayos a \$0.00.
 		}
+
+		%Ejercicio 13		
 		\item {
 			Sea $X$ una variable aleatoria con función de densidad dada por
-			\[f_X(x) = \frac{1}{1}e^{-|x|}\mathbb{I}_{\mathbb{R}}(x)\]
+			\[f_X(x) = \frac{1}{2}e^{-|x|}\mathbb{I}_{\mathbb{R}}(x)\]
 			Si $Y = X^2$, encuentre la función de distribución acumulada de $Y$.
+			
+			Para obtener la función de distribución acumulada usamos la ley de estadística inconsciente y tenemos que:
+			
+		$F_{x}(y) = P(Y \leq y) = P(X^2\leq y) = P(-\sqrt{y} \leq X \leq \sqrt{y})$	\\
+					
+			Ya que es una variable aleatoria continua, y basándonos en cómo definimos la función de distribución arriba, el resultado sería la siguiente integral:
+			$\int_{-\sqrt{y}}^{\sqrt{y}} \frac{1}{2}e^{-|x|}$			
+			
+			Desarrollamos:
+			 \[
+               \int_{-\sqrt{y}}^{\sqrt{y}} \frac{1}{2}e^{-|x|}
+                =
+                 \int_{-\sqrt{y}}^{0} \frac{1}{2}e^{x} 
+                 +
+                 \int_{0}^{\sqrt{y}} \frac{1}{2}e^{-x}
+                =
+                 \left[\frac{1}{2}e^{x}\right]\Big|_{-\sqrt{y}}^{0}
+                 +
+                 \left[-\frac{1}{2}e^{-x}\right]\Big|_{0}^{\sqrt{y}}
+             \]        
+             \[
+                           =
+                \left(\frac{1}{2} - \frac{1}{2}e^{-\sqrt{y}}\right)
+                +
+                \left(- \frac{1}{2}e^{-\sqrt{y}} + \frac{1}{2}\right)
+                =
+                1 - e^{-\sqrt{y}}
+            \]        
+            
+            De ahí,\\
+            $F_{x}(y) =  1 - e^{-\sqrt{y}}$\\
 		}
+		
+		%Ejercicio 14
 		\item {
 			Sea $X$ una variable aleatoria con función de densidad dada por
 			\[
@@ -203,7 +261,36 @@
 									0, $ en otro caso$
 								 \end{cases}
 			\]
-			Encuentre $P(X \leq \frac{2}{3}|X > \frac{1}{3})$.
+			Encuentre $P(X \leq \frac{2}{3}|X > \frac{1}{3})$.\\
+			
+			Tenemos una probabilidad condicional y vemos que:\\
+			
+			 $P(X \leq \frac{2}{3}|X > \frac{1}{3}) = \frac{P((X \leq \frac{2}{3}) \cap (X > \frac{1}{3}))}{P(X > \frac{1}{3})}$\\
+			 
+			 Sabemos que la variable es continua, y estamos evaluando en el caso donde está entre $ 0 < x < 1$ ya que es el caso donde está valuada,  así que:\\
+			 
+			 $P((X \leq \frac{2}{3}) \cap (X > \frac{1}{3})) = \int_{\frac{1}{3}}^{\frac{2}{3}} 4x^3 dx$ \\
+			 
+			 Ya que en el caso donde estamos valuando, el límite está en 1, podemos tener lo siguiente:
+			 $P(X > \frac{1}{3}) = \int_{\frac{1}{3}}^{1} 4x^3 dx$\\
+			 
+			 Desarrollamos:\\
+			 $P((X \leq \frac{2}{3}) \cap (X > \frac{1}{3})) = 
+			 \left[x^4\right]\Big|_{\frac{1}{3}}^{\frac{2}{3}}=
+			 \frac{16}{81} - \frac{1}{81} = \frac{5}{27}$\\
+			 
+			 $P(X > \frac{1}{3}) = 
+			 \left[x^4\right]\Big|_{\frac{1}{3}}^{1}=
+			 1 - \frac{1}{81} = \frac{80}{81}$\\
+			 
+			 Entonces,\\
+			 $P(X \leq \frac{2}{3}|X > \frac{1}{3})
+			 = \frac{\frac{5}{27}}{\frac{80}{81}}
+			 = \frac{3}{16}$
+			 
+			 
+			 
+			 
 		}
 	\end{enumerate}
 \end{document}
