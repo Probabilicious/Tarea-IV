@@ -16,7 +16,7 @@
 		\vspace{1.5cm}
 		{\huge\bfseries Tarea IV\par}
 		\vspace{.5cm}
-		
+
 		{\Large\itshape Alan Ernesto Arteaga Vázquez \par}
 		 \vspace{.5cm}
 		{\Large\itshape Raúl Llamosas Alvarado \par}
@@ -26,7 +26,7 @@
 		{\Large\itshape Jean Paul Ruiz Melo\par}
 		\vspace{.5cm}
 		{\Large\itshape Sandra Del Mar Soto Corderi \par}
-		
+
 		\vfill
 		 \includegraphics[width=0.5\textwidth]{escudo.png}
 		\vfill
@@ -152,19 +152,54 @@
 		\item {
 			Suponga que se selecciona aleatoriamente un punto $z$ del cuadrado con
 			esquinas (2, 1), (3, 1), (2, 2,) y (3, 2). Sea $A$ la variable aleatoria
-			que mide el área del triángulo con vértices (2, 1), (3, 1) y $z$.
+			que mide el área del triángulo con vértices (2, 1), (3, 1) y $z$.\\
+			El área de un triángulo es $\frac{b\cdot h}{2}$. \\
+			En este caso la base está fija como $b = \sqrt{(2-3)^2+(1-1)^2} = 1$.\\
+			Y cómo la base es paralela al eje $x$, ambas entradas son 1,
+			entonces la altura del triángulo sería $y_z-1, z = (x_z, y_z)$.
+			De estas dos cosas, $A = \frac{b \cdot h}{2} = \frac{1 \cdot(y_z-1)}{2}
+			= \frac{y_z-1}{2}$
 			\begin{enumerate}
 				\item {
-					¿Cuál es el valor más grande que $A$ puede tomar?
+					¿Cuál es el valor más grande que $A$ puede tomar?\\
+					Como la base está fija, el cambio en el área depenede sólo
+					de la altura.\\
+					Dado el cuadrado, esta altura puede ser a lo más $2-1 = 1$.
+					Entonces el área máxima es $A_m = \frac{1\cdot 1}{2} = \frac{1}{2}$.
 				}
 				\item {
-					¿Cuál es el conjunto de puntos para el cuál $A \leq \frac{1}{2}$?
+					¿Cuál es el conjunto de puntos para el cuál $A \leq \frac{1}{4}$?
+					\begin{align*}
+						A &= \frac{y_z-1}{2} \leq \frac{1}{4}\\
+						  &\implies y_z-1 \leq \frac{1}{2}\\
+						  &\implies y_z \leq \frac{3}{2}
+					\end{align*}
+					Entonces, ese conjunto de puntos son $\{(x, y) | y = \frac{3}{2}\}$
+					y están dentro del cuadrado.\\
+					Forman una línea paralela al eje $x$ dentro del cuadrado.
 				}
 				\item {
-					Encuentre la función de densidad de $A$.
+					Encuentre la función de densidad de $A$.\\
+					La densidad es la derivada de la distribución
+					\[\frac{d(2x)}{dx} = 2\]
+					\[f_X(x) = 2 \mathbb{I}_{[0, \frac{1}{2}]}\]
+
 				}
 				\item {
-					Encuentre la función de distribución de $A$.
+					Encuentre la función de distribución de $A$.\\
+					El área no puede ser negativa, ni mayor a $\frac{1}{2}$.
+					En otro caso, los puntos que dan un área menor o igual a $k$
+					son
+					\[A = \frac{y_z-1}{2} \leq k \implies y_z \leq 2k + 1\]
+					Que corresponden a todos los puntos dentro del cuadrado y
+					debajo de la recta $y = 2k+1$.\\
+					Como el área total del cuadrado es 1, y el área de los
+					puntos es en rectángulo con base $b = 1$
+					y altura $h = 2k+1-1 = 2k$, entonces el área proporcional de
+					los puntos es
+					$A = \frac{A_{puntos}}{A_{total}} = \frac{1 \cdot 2k}{1} = 2k$
+					Entonces, la función de distribución es
+					\[F_X(x) = 2x \mathbb{I}_{[0, \frac{1}{2}]}\]
 				}
 			\end{enumerate}
 		}
@@ -172,15 +207,33 @@
 			Una póliza de seguros cubre las reclamaciones médicas de los empleados
 			de una pequeña compañía.\\
 			El valor $V$ de las reclamaciones hechas en un año es descrita mediante
-			\[V = 100000Y\]
+			\[V = 100,000Y\]
 			Donde $Y$ es una variable aleatoria con función de densidad
 			\[
-				f_\gamma(y) = \begin{cases}
-												k(1-y)^4, $ si $ 0 < y < 1\\
-												0, $ en otro caso$
-											\end{cases}
+				f_Y(y) = \begin{cases}
+								k(1-y)^4, $ si $ 0 < y < 1\\
+								0, $ en otro caso$
+							  \end{cases}
 			\]
-			Donde $k$ es constante. ¿Cuál es la probabilidad de que $V$ exceda 10000?
+			Donde $k$ es constante. ¿Cuál es la probabilidad de que $V$ exceda 10,000?\\
+			Esto sería
+			\[V = 100,000Y > 10,000 \implies Y > \frac{1}{10}\]
+			Luego, hay que encontrar la distribución
+			\begin{align*}
+				F_Y(y) &= \int_{-\infty}^{y}{f_Y(u)du} = \int_{0}^{y}{k(1-u)^4du}\\
+					   &= k\int_{0}^{y}{(1-u)^4du} = k (\frac{(1-u)^5}{5})\Big|_0^y\\
+					   &= k(\frac{(1-y)^5}{5} - \frac{1}{5})
+			\end{align*}
+			Y tenemos que
+			\begin{align*}
+				P(Y > \frac{1}{10}) &= 1 - P(Y \leq \frac{1}{10})\\
+									&= 1 - F_Y(\frac{1}{10})\\
+									&= k(\frac{(1-\frac{1}{10})^5}{5} - \frac{1}{5})\\
+									&= k(\frac{59049}{100000} - \frac{20000}{100000})\\
+									&= k(\frac{39049}{100000}) = 0.39049k
+			\end{align*}
+			Entonces, la probabilidad de que $V$ exceda los 10,000 es un poco
+			menos del 40\%.
 			}
 		\item {
 			Una urna contiene 5 bolas rojas y 5 bolas azules. Se realiza un juego
@@ -188,7 +241,66 @@
 			si se extraen dos bolas del mismo color, el jugador gana \$1.11 y si se
 			extraen dos bolas de distinto color el jugador pierde \$1.00. Si una
 			persona participa en el juego dos veces, calcule la probabilidad de que
-			la ganancia de esta persona sea mayos a \$0.00.
+			la ganancia de esta persona sea mayor a \$0.00.\\
+			Nuestro espacio de probabilidad para una ronda dada sería
+			$\Omega = \{(c_1, c_2)| c_j \in \{rojo, azul\}\}$.\\
+			La probabilidad sería sólo casos favorables sobre totales.
+			Los casos totales de una ronda son $10 \cdot 9 = 90$.\\
+			Para que las bolas sean del mismo color en una ronda,
+			los casos favorables son $10 \cdot 4 = 40$.\\
+			Con $M$ el evento de que las bolas tengan el mismo color,
+			$P(M) = \frac{40}{90} = \frac{4}{9}$.\\
+			Y la probabilidad de que sean de diferente color es
+			$P(M^c) = 1 - P(M_i) = \frac{5}{9}$.\\
+			Sea $X$ la variable aleatoria que dice cuanto dinero ganas en una
+			ronda
+			\[
+				X(\omega) = \begin{cases}
+								1, $ si $ \omega \in M\\
+								-1.11, $ en otro caso$
+							\end{cases}
+			\]
+			Para dos rondas, el espacio sería $\Omega^2$.
+			Como al inicio de cada participación el estado del juego es el mismo,
+			5 bolas de cada color, entonces cada ronda es un experimento
+			independiente.\\
+			Entonces, la probabilidad de un evento $(A_1, A_2)$ en este espacio es
+			$P(A_1 \cap A_2) = P(A_1)P(A_2)$.\\
+			La ganancia sería simplemente la suma de la ganancia de las dos rondas.\\
+			Entonces, la variable aleatoria $X_2$ que dice cuanto dinero ganas
+			en dos rondas sería
+			\begin{align*}
+				X_2((A_1, A_2)) &= X(A_1)+X(A_2)\\
+								&= \begin{cases}
+									-1.11-1.11 = -2.22, $ si $ A_1 = A_2 = M^c \\
+									1-1.11 = -0.11, $ si $ A_1 = M, A_2 = M^c \\
+									-1.11+1 = -0.11, $ si $ A_1 = M^c, A_2 = M \\
+									1+1 = 2, $ si $ A_1 = A_2 = M \\
+								\end{cases}
+			\end{align*}
+
+			Entonces la densidad de $X_2$ sería
+			\[
+				f_{X_2}(x) = \begin{cases}
+							P(M)^2 = \frac{16}{81}, $ si $ x = 2\\
+							P(M)P(M^c) + P(M^c)P(M) = \frac{40}{81}, $ si $ x = -0.11\\
+							P(M^c)^2 = \frac{25}{81}, $ si $ x = -2.22\\
+							0, $ en otro caso$
+						 \end{cases}
+			\]
+			Finalmente,
+			\begin{align*}
+				P(X_2 > 0) &= 1 - P(X_2 \leq 0) \\
+						 &= 1 - \sum_{x \leq 0}{f_{X_2}(x)}\\
+						 &= 1 - (f_{X_2}(-2.22)+f_{X_2}(-0.11))\\
+						 &= 1 - (\frac{25}{81} + \frac{40}{81})
+						 = 1- \frac{65}{81}
+						 = \frac{16}{81}\\
+						 &\approx 0.2
+			\end{align*}
+			Entonces la probabilidad de no perder dinero después de dos rondas
+			es poco menos de 20\%.
+
 		}
 		\item {
 			Sea $X$ una variable aleatoria con función de densidad dada por
