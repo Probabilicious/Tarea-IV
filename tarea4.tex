@@ -16,7 +16,7 @@
 		\vspace{1.5cm}
 		{\huge\bfseries Tarea IV\par}
 		\vspace{.5cm}
-		
+
 		{\Large\itshape Alan Ernesto Arteaga Vázquez \par}
 		 \vspace{.5cm}
 		{\Large\itshape Raúl Llamosas Alvarado \par}
@@ -26,7 +26,7 @@
 		{\Large\itshape Jean Paul Ruiz Melo\par}
 		\vspace{.5cm}
 		{\Large\itshape Sandra Del Mar Soto Corderi \par}
-		
+
 		\vfill
 		 \includegraphics[width=0.5\textwidth]{escudo.png}
 		\vfill
@@ -90,7 +90,21 @@
 								0, $ en otro caso$
 							 \end{cases}
 			\]
-			En donde $0 < r < 1$. Encuentre $c$ para que $f$ sea función de densidad.
+			En donde $0 < r < 1$. Encuentre $c$ para que $f$ sea función de densidad.\\
+			Podemos notar que es una funcion de densidad discreta, entonces tenemos:
+			\begin{center}
+			    $1 = \sum_{x=0}^{\infty} P(i)$
+		    \end{center}
+		    Donde $P(i) = cr^{x}$. Entoces sustituyendo tenemos:
+		    \[1 = \sum_{x=0}^{\infty} cr^{x}\]
+		    \[1 = c\sum_{x=0}^{\infty} r^{x}\]
+		    \[\frac{1}{c} = \sum_{x=0}^{\infty} r^{x}\]
+		    Entonces esto es la serie geométrica:
+		    \[\frac{1}{c} = 1 + r + r^{2} + r^{3} + ...\]
+		    Y como r es un fración, converge a:
+		    \[\frac{1}{c} = \frac{1}{1-r}\]
+		    Entonces para que $f$ sea función de densidad:
+		    \[c = r-1\]
 		}
 		\item {
 		La función de densidad de una variable aleatoria $X$ es
@@ -98,14 +112,51 @@
 		Donde $k > 0$.
 		\begin{enumerate}
 			\item {
-				Encontrar el valor de $\gamma$.
+				Encontrar el valor de $\gamma$.\\
+				Tenemos que:
+    			\[1 = \int_{0}^{\infty} \gamma x^2 e^{-kx} dx\]
+    			Entonces resolviendo la integral tenemos:
+    			\[= \gamma \int x^{2}e^{-kx}\]
+
+    			\[= \gamma (- \frac{x^{2}e^{-kx}}{k} - \int \frac{2xe^{-kx}}{k})\]
+
+    			\[= \gamma (- \frac{x^{2}e^{-kx}}{k} + \frac{2}{k}(-\frac{xe^{-kx}}{k}- \int -
+    				\frac{e^{-kx}}{k}))\]
+
+    		    \[= \gamma (- \frac{x^{2}e^{-kx}}{k} + \frac{2}{k}(-\frac{xe^{-kx}}{k}- \frac{1}{k^{2}} ( \int e^{u})); u = -kx , dx = \frac{-1}{k}du\]
+
+    			\[= \gamma (- \frac{x^{2}e^{-kx}}{k} + \frac{2}{k}(-\frac{xe^{-kx}}{k}- \frac{e^{-kx}}{k^{2}}))\]
+
+    			\[= \gamma (- \frac{x^{2}e^{-kx}}{k} - \frac{2xe^{-kx}}{k^{2}}- \frac{e^{-kx}}{k^{3}})\]
+
+    			\[ = -\gamma (\frac{(k^{2}x^{2} + 2kx + 2)e^{-kx}}{k^{3}}\Big|_0^\infty \]
+    			Resolviendo, tenemo:
+    			\[ 1 = \frac{2\gamma}{k^{3}}\]
+    			Entonces $\gamma = \frac{k^{3}}{2}$.
 			}
 			\item {
 				Encontrar la función de distribución $F_X$ de la variable aleatoria
-				$X$.
+				$X$.\\
+
+				Entonces tenemos:
+					\[FX(x) = \int_{0}^{x} \gamma x^2 e^{-kx} dx\]
+				Pero ya tenemos que $\gamma = \frac{k^{3}}{2}$, entonces:
+					\[FX(x) = \int_{0}^{x} \frac{k^{3}}{2} x^2 e^{-kx} dx\]
+				Entonces calculando el integral tenemos:
+					\[FX(x) =  \frac{(k^{2}x^{2} + 2kx + 2) e^{-kx}}{2}\Big|_0^x \]
+				Y sustituyendo tenemos:
+					\[FX(x)= \frac{e^{-kx} (2e^{kx} - k^{2} x^{2} -2kx - 2)}{2}\]
 			}
 			\item {
 				Calcule $P(0 < X < \frac{1}{k})$
+				Tenemos:
+				\[ P(a < X < b) = FX(b) - FX(a)\]
+				Entonces:
+				\[=P(0 < X < \frac{1}{k}) = FX(\frac{1}{k}) - FX(0)\]
+				\[=\frac{e^{-k\frac{1}{k}} (2e^{k\frac{1}{k}} - k^{2} \frac{1}{k}^{2} -2k\frac{1}{k} - 2)}{2} - \frac{e^{-k0} (2e^{k0} - k^{2} 0^{2} -2k0 - 2)}{2}\]
+			    \[=\frac{0.367 (5.43 - 5)}{2} - \frac{1 (2 - 2)}{2}\]
+				\[0.079 - 0\]
+				\[=0.079 \]
 			}
 		\end{enumerate}
 		}
@@ -120,7 +171,30 @@
 								0, $ si $ x \geq 3
 						 	 \end{cases}
 			\]
-			Donde $0 < \beta < 1$. Encontrar la función de distribución $F_X$
+			Donde $0 < \beta < 1$. Encontrar la función de distribución $F_X$\\
+
+			Si x $<$ 0, se queda en cero.
+
+			Cuando 0 $\leq$ X $<$ 1, tenemos:
+		    \[\int_{0}^{x} \frac{1}{2}\beta dx = \frac{\beta x}{2}\]
+		    Para 1 $\leq$ X $<$ 1:
+		    \[\int_{1}^{x} \frac{1}{2}dx = \frac{(x-1)}{2}\]
+		    Usando el anterior tenemos:
+		    \[\frac{(x-1)}{2} +  \frac{\beta x}{2} \]
+		    Para 2 $\leq$ X $<$ 3:
+		     \[\int_{2}^{x}\frac{1}{2}(1-\beta)dx = -\frac{(x-2)x}{4}\]
+		     Lo cual es:
+		     \[-\frac{(x-2)x}{4} + \frac{(x-1)}{2} +  \frac{\beta x}{2}\]
+		     Entonces la función de distribución es:
+		     	\[
+				f(x) = \begin{cases}
+								0, $ si $ x < 0\\
+								\frac{\beta x}{2}, $ si $ 0 \leq x < 1\\
+								\frac{(x-1)}{2} +  \frac{\beta x}{2}, $ si $ 1 \leq x < 2\\
+								-\frac{(x-2)x}{4} + \frac{(x-1)}{2} +  \frac{\beta x}{2}, $ si $ 2 < x < 3\\
+								1, $ si $ x \geq 3
+						 	 \end{cases}
+			\]
 		}
 		\item {
 			Demuestre que $f_X(x) = \frac{1}{2}e^{-|x|}\mathbb{I}_\mathbb{R}(x)$ es
