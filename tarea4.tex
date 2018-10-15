@@ -50,7 +50,7 @@
 				\end{cases}
 			\]
 			¿Es $X$ variable aleatoria?
-			
+
 			Tenemos que una variable aleatoria está definida como: \\
 			\textbf{Definición:} Para un espacio de probabilidad $P=(\Omega,F,P)$ tenemos que $X:\Omega \mapsto \mathds{R}$ es una variable aleatoria si:
         		   	\begin{center}
@@ -67,12 +67,12 @@
 		    \end{center}
 		    Pero ésto solamente sucede cuando $w\notin A $, es decir cuando $w \in A^c$, pero como F es una $\sigma-algebra$ entonces claramente $A^c\in F$ por lo que $\lbrace w \in \Omega : X(w) \leq x \rbrace = A^c \in F$ si $x\in [0,1)$.  Ahora tenemos que:\\
 		    \begin{center}
-		        si $x\in [1,\infty) \Rightarrow \lbrace w \in \Omega : X(w) \leq x \rbrace = \lbrace w \in \Omega : X(w)=1 \rbrace  = \lbrace w\in \Omega: w \in A \rbrace = A$. 
+		        si $x\in [1,\infty) \Rightarrow \lbrace w \in \Omega : X(w) \leq x \rbrace = \lbrace w \in \Omega : X(w)=1 \rbrace  = \lbrace w\in \Omega: w \in A \rbrace = A$.
 		        Y $A \in F$ por hipótesis. Entonces cumple los requisitos de que sea una variable aleatoria$_{\blacksquare}$
 \end{center}
 
 		}
-		
+
 		%Ejercicio 2
 		\item {
 			Considere un espacio de probabilidad $\Omega = \{1, 2, 3, 4, 5, 6\}$ y
@@ -83,34 +83,34 @@
 				X_2(\omega) &= \begin{cases}																						1, \omega $ par$\\																			0, \omega $ impar$																			\end{cases}
 			\end{align*}
 			¿Son $X_1$ y $X_2$ variables aleatorias en este espacio de probabilidad?
-			
+
 			Tenemos que: \\
 			\begin{center}
 			    $X_{1}(w)= \begin{cases} 1, si\ \omega=1\\ 4,si \ \omega=2 \\ 9, si \ \omega=3\\ 16, si \ \omega=4 \\ 25, si \ \omega=5 \\ 36, si \ \omega=6  \end{cases}$
 			\end{center}
 			Entonces que los intervalos a considerar son $(-\infty,1),[1,4),[4,9),[9,16),[16,25),[25,36),[36,\infty)$\\
 			\begin{center}
-			    si $x\in (-\infty,1) \Rightarrow \lbrace w\in \Omega : X(w)\leq x \rbrace = \emptyset \in F $ \\ 
+			    si $x\in (-\infty,1) \Rightarrow \lbrace w\in \Omega : X(w)\leq x \rbrace = \emptyset \in F $ \\
 			    si $x\in [1,4) \Rightarrow \lbrace w \in \Omega : X(w) \leq x \rbrace = \lbrace 1 \rbrace \notin F$
 			\end{center}
 			Como podemos ver, no se encuentra en F por lo tanto  $X_{1}$ no es una variable aleatoria. Ahora, tenemos que:\\
 			\begin{center}
 			    $X_{2}(w) = \begin{cases}
 			    1, si \ \omega \in \lbrace 2,4,6 \rbrace \\
-			    0, si \ \omega \in \lbrace 1,3,5 \rbrace 
+			    0, si \ \omega \in \lbrace 1,3,5 \rbrace
 			    \end{cases}$
 			\end{center}
-	
+
 			Los intervalos a considerar son $(-\infty,0),[0,1),[1,\infty)$ entonces:\\
 			\begin{center}
 			    si $x\in (-\infty,0) \Rightarrow \lbrace w\in \Omega: X(w) \leq x \rbrace = \emptyset \in F. $\\
 			    si $x\in [0,1) \Rightarrow \lbrace w \in \Omega: X(w) \leq x \rbrace = \lbrace 1,3,5 \rbrace \in F$  \\
 			    si $x\in [1,\infty) \Rightarrow \lbrace w\in \Omega: X(w)\leq x \rbrace = \lbrace 2,4,6 \rbrace \in F$
 			\end{center}
-Entonces sí es una variable aleatoria. Entonces en conclusión $X_{2}$ es una variable aleatoria pero $X_{1}$ no lo es.\\			
+Entonces sí es una variable aleatoria. Entonces en conclusión $X_{2}$ es una variable aleatoria pero $X_{1}$ no lo es.\\
 		}
-		
-		%Ejercicio 3		
+
+		%Ejercicio 3
 		\item {
 			Sea $f$ una función definida por
 			\[
@@ -125,21 +125,21 @@ Entonces sí es una variable aleatoria. Entonces en conclusión $X_{2}$ es una v
 				\item{
 					Determine el valor de $c$ de tal manera que $f$ sea una función de
 					densidad.
-					
-					
+
+
 					Como es una función de densidad continua tenemos que tiene que cumplir lo siguiente:
 					\begin{center}
 					    $$\int_{-\infty}^{\infty} f(x) dx = \int_{-\infty}^{-1}f(x)dx+\int_{-1}^{0}f(x)dx+\int_{0}^{3}f(x)dx+\int_{3}^{c}f(x)dx+\int_{c}^{\infty}f(x)dx$$\\
-					    $$=0+\int_{-1}^{0}(x+1)dx+0+\int_{3}^{c}(2x+6)dx+0=$$\\ 
+					    $$=0+\int_{-1}^{0}(x+1)dx+0+\int_{3}^{c}(2x+6)dx+0=$$\\
 					    $$(\frac{x^2}{2}+x)|_{-1}^{0}+2[(\frac{x^2}{2}+3x)|_{3}^{c}]=1$$\\
 					    $$(\frac{0^2}{2}+0)-(\frac{(-1)^2}{2}-1)+2[(\frac{c^2}{2}+3c)-(\frac{9}{2}+9)]=1$$ \\
-					    $$\frac{1}{2}+2[(\frac{c^2+6c}{2})-(\frac{27}{2})]=1$$\\ 
+					    $$\frac{1}{2}+2[(\frac{c^2+6c}{2})-(\frac{27}{2})]=1$$\\
 					    \end{center}
-					 Y eso solo sucede cuando: 
+					 Y eso solo sucede cuando:
 					\begin{center}
 					    $$c^2+6c-27+\frac{1}{2}=1$$\\
 					    $$c^2+6c-\frac{55}{2}=0$$
-					\end{center}   
+					\end{center}
 					Cuyos valores que resuelven dicha ecuación son:\\
 					\begin{center}
 					    $c_{1}=\frac{-6+\sqrt{36+110}}{2}=\frac{-6+\sqrt{146}}{2}$\\
@@ -150,22 +150,22 @@ Entonces sí es una variable aleatoria. Entonces en conclusión $X_{2}$ es una v
 					   $$ c=\frac{-6+\sqrt{146}}{2}$$
 					\end{center}
 				    }
-				
+
 				\item {
 					Encuentre la función de distribución correspondiente a $f$.\\ \\
 					Al tratarse de una función continua se tiene que $F(x)= \int_{-\infty}^{x} f(t)dt$ entonces se sigue que:\\
 					\begin{center}
-					    $F(x)= \begin{cases} 
+					    $F(x)= \begin{cases}
 					    \frac{x^2}{2}+x, \ $si$ \ -1\leq x \leq 0 \\
 					    \frac{3x^2}{2}-5x, \ $si$ \ 3\leq x \leq  \frac{-6+\sqrt{146}}{2}
-					    
+
 					    \end{cases}$
 					\end{center}
-					Ya que que al tratarse de una función acumulativa se suma a la integral  $\int 2x-6$ la integral $\int x+1$ debido a que es acumulativa. 
+					Ya que que al tratarse de una función acumulativa se suma a la integral  $\int 2x-6$ la integral $\int x+1$ debido a que es acumulativa.
 				}
 \end{enumerate}
 		}
-		
+
 		%Ejercicio 4
 		\item {
 			Sea $f$ una función definida por
@@ -191,7 +191,7 @@ Entonces sí es una variable aleatoria. Entonces en conclusión $X_{2}$ es una v
 		    Entonces para que $f$ sea función de densidad:
 		    \[c = r-1\]
 		}
-		
+
 		%Ejercicio 5
 		\item {
 		La función de densidad de una variable aleatoria $X$ es
@@ -247,7 +247,7 @@ Entonces sí es una variable aleatoria. Entonces en conclusión $X_{2}$ es una v
 			}
 		\end{enumerate}
 		}
-		
+
 		%Ejercicio 6
 		\item {
 			Sea
@@ -285,28 +285,151 @@ Entonces sí es una variable aleatoria. Entonces en conclusión $X_{2}$ es una v
 						 	 \end{cases}
 			\]
 		}
-		
+
 		%Ejercicio 7
 		\item {
 			Demuestre que $f_X(x) = \frac{1}{2}e^{-|x|}\mathbb{I}_\mathbb{R}(x)$ es
 			una función de densidad.
 		}
-		
+
+			Como la variable aleatoria toma valores continuos, se tiene que para
+			demostrar que $f_X^{(x)}$ se trata de una función de densidad, basta con
+			probar que:
+			\begin{enumerate}
+				\item {
+					$$f_X^{(x)} \geq 0 \forall x$$
+
+					Veamos el límite de la función cuando $x \rightarrow \infty$, así:
+					$$ \lim_{x\to\infty}  \frac{1}{2}e^{-|x|} $$
+
+					(como x tiende a infinito positivo, se sigue:)
+					$$ = \lim_{x\to\infty}  \frac{1}{2}e^{-x}
+					   = \lim_{x\to\infty}  \frac{1}{2e^{x}} = \frac{1}{\infty} = 0$$
+
+					análogamente, el límite de la función cuando  $x \rightarrow -\infty$:
+					$$ \lim_{x\to -\infty}  \frac{1}{2}e^{-|x|} $$
+
+					(como x tiende a infinito negativo, y por la definición de
+					valor absoluto, se sigue:)
+					$$ = \lim_{x\to -\infty}  \frac{1}{2}e^{-(-x)}
+					   = \lim_{x\to -\infty}  \frac{1}{2}e^{x}
+					   = \lim_{x\to -\infty}  \frac{e^x}{2}
+					   = \frac{1}{2} \lim_{x\to -\infty}  e^x = \frac{1}{2} \cdot 0 = 0$$
+
+					Luego, para cualquier número real, se tiene que $|x|$ es positivo
+					para cualquier $x \in \mathbb{R}$, luego, como $e^x$ es positivo
+					para cualquier x número real, notemos que:
+						$$ 1 = e^0 = e^{-x}e^x $$
+					y así:
+						$$ e^{-x} = \frac{1}{e^x} $$
+					lo cual, resulta ser un número positivo.
+
+					Así, podemos comprobar que $\frac{1}{2}e^{-|x|} = f_X^{(x)} \geq 0 \; \forall x$
+
+				}
+				\item {
+					$$\int_{-\infty}^{\infty} f_X^{(x)} du = 1$$
+
+					Se tiene que la integral definida de la función $f_X$ viene dada por:
+					$$\int_{-\infty}^{\infty} \frac{1}{2}e^{-|x|} dx$$
+
+					lo cual equivale a:
+					$$\int_{-\infty}^{0} \frac{1}{2}e^{-|x|} dx +
+					  \int_{0}^{\infty} \frac{1}{2}e^{-|x|} dx $$
+
+					luego, como en la primera integral, el intervalo de integración
+					es $ -\infty \leq x \leq 0$, y en la segunda $ 0\leq 0 \leq \infty$
+					podemos reescribir:
+					$$	\int_{-\infty}^{0} \frac{1}{2}e^{-(-x)} dx +
+					  	\int_{0}^{\infty} \frac{1}{2}e^{-(x)} dx
+					 =  \int_{-\infty}^{0} \frac{1}{2}e^{x} dx +
+ 					  	\int_{0}^{\infty} \frac{1}{2}e^{-(x)} dx $$
+
+					$$ = \frac{1}{2} \int_{-\infty}^{0} e^{x} dx +
+					     \frac{1}{2} \int_{0}^{\infty} e^{-(x)} dx $$
+
+				 	Ahora, considerando que
+	 					$$\lim_{x\to \infty}  e^{-x} = \lim_{x\to -\infty} \frac{1}{e^x} = 0$$
+	 					$$\lim_{x\to -\infty}  e^x = 0$$
+					Tenemos que:
+					$$ = \frac{1}{2} [e^0 - e^{-\infty}] -
+					     \frac{1}{2} [e^{-{\infty}} - e^{-0}]
+					   = \frac{1}{2} [1 - 0] -
+   					     \frac{1}{2} [0 - 1] = \frac{1}{2} - (- \frac{1}{2}) = 1 $$
+				}
+			\end{enumerate}
+
+			Así, como se cumplen $f_X^{(x)} \geq 0 \; \forall x$ y
+			$\int_{-\infty}^{\infty} f_X^{(x)} du = 1$, se tiene que $f_X^{(x)}$
+			resulta ser una función de densidad de variable aleatoria continua.
+
+
 		%Ejercicio 8
 		\item {
 			Sea $X$ una variable aleatoria con función de densidad
-				\[f_\gamma(y) = cy \mathbb{I}_{\{1, 2, 3, 4\}}(y)\]
+				\[f_Y(y) = cy \mathbb{I}_{\{1, 2, 3, 4\}}(y)\]
 				\begin{enumerate}
 					\item {
-						Determinar el valir de $c$ para que $f_\gamma$ sea una función de
+						Determinar el valor de $c$ para que $f_Y$ sea una función de
 						densidad de probabilidad.
+
+						Como la variable aleatoria $Y$ toma valores discretos,
+						se tiene que para que $f_Y$ cumpla ser una funcion de
+						densidad de probabilidad debe cumplirse:
+							$$ \sum_{j = 1}^{\infty} f_Y^{(y_j)} = 1 $$
+
+						así, se tiene por la definición de $f_Y$ (como para todo
+						valor distinto de $1, 2, 3, 4; \; f_Y(y) = 0$):
+							$$ 1 = \sum_{j = 1}^{\infty} f_Y^{(y_j)} = 0 + c + 2c + 3c + 4c + 0 + 0 + ... $$
+							$$ 1 = \sum_{j = 1}^{\infty} f_Y^{(y_j)} = c + 2c + 3c + 4c $$
+
+						de ahí obtenemos la ecuación:
+							$$ 1 = c + 2c + 3c + 4c $$
+							$$ 1 = 10c $$
+							$$ c = \frac{1}{10} $$
+
+						Así, para que se cumpla $ \sum_{j = 1}^{\infty} f_Y^{(y_j)} = 1 $,
+						se sigue que $c$ debe tener el valor $\frac{1}{10}$.
 					}
 					\item {
-						Calcule $P(1 < Y \leq 3)$ y $p(Y < 1 | Y \leq 3)$
+						Calcule $P(1 < Y \leq 3)$ y $P(Y < 1 | Y \leq 3)$
+
+						Se tiene que $P(a < y \leq b) = F_Y^{(b)} - F_Y^{(a)}$,
+						así, como $Y$ es una variable aleatoria que toma valores
+						discretos podemos decir:
+
+						$$ F_Y^{(3)} = \sum_{\{y | y \leq 3 \}} f_Y^{(y)}
+						 = f_Y^{(1)} + f_Y^{(2)} + f_Y^{(3)}
+						 = \frac{1}{10} + \frac{2}{10} + \frac{3}{10}
+						 = \frac{6}{10}$$
+
+						análogamente:
+						$$ F_Y^{(1)} = \sum_{\{y | y \leq 1 \}} f_Y^{(y)}
+						 = f_Y^{(1)} = \frac{1}{10}$$
+
+						así, se sigue:
+						$$ P(1 < Y \leq 3) = F_Y^{(b)} - F_Y^{(a)}
+						 = \frac{6}{10} - \frac{1}{10} = \frac{5}{10}$$
+
+						Ahora, para $P(Y < 1 | Y \leq 3)$, se tiene:
+
+						$$ P(Y < 1 | Y \leq 3)
+						 = \frac{P[(Y < 1) \cap (Y \leq 3)]}{P(Y \leq 3)}
+						 = \frac{P(Y < 1)}{P(Y \leq 3)}$$
+
+						Notemos ahora:
+						$$ P(Y \leq 3) = F_Y^{(3)} = \frac{6}{10} $$
+						$$ P(Y < 1) = \lim_{h\to 0^+} F_Y^{(1 - h)}
+						 = \lim_{h\to 0^+} \sum_{\{y | y \leq 1 - h \}} f_Y^{(y)}
+						 = \lim_{h\to 0^+} 0 = 0 $$
+
+						De esta manera concluimos:
+						$$ P(Y < 1 | Y \leq 3) = \frac{P(Y < 1)}{P(Y \leq 3)}
+						 = \frac{0}{\frac{6}{10}} = 0 $$
 					}
 				\end{enumerate}
 		}
-		
+
 		%Ejercicio 9
 		\item {
 			Sea $X$ una variable aleatoria continua con función de densidad
@@ -317,8 +440,52 @@ Entonces sí es una variable aleatoria. Entonces en conclusión $X_{2}$ es una v
 									 \end{cases}
 				\]
 			Calcule $P(|X-\frac{1}{2}| > \frac{1}{4})$.
+
+			Tenemos que la siguiente desigualdad es equivalente a:
+			$$ |X-\frac{1}{2}| > \frac{1}{4}
+			   = (X-\frac{1}{2} > \frac{1}{4}) \cup (X-\frac{1}{2} < -\frac{1}{4})$$
+			$$ = (X > \frac{3}{4}) \cup (X < \frac{1}{4}) $$
+
+			De ahí, podemos reescribir:
+				$$ P(|X-\frac{1}{2}| > \frac{1}{4})
+				 = P[(X > \frac{3}{4}) \cup (X < \frac{1}{4})]$$
+
+			Luego, como $P$ es una medida de probabilidad, se sigue:
+				$$ P[(X > \frac{3}{4}) \cup (X < \frac{1}{4})]
+				 = P(X > \frac{3}{4}) + P(X < \frac{1}{4}) $$
+
+			De allí, obtenemos $P(X > \frac{3}{4})$ y $P(X < \frac{1}{4})$, las cuales
+			pueden calcularse mediante:
+				$$ P(X > \frac{3}{4}) = 1 - P(X \leq \frac{3}{4})
+				 = 1 - F_X^{(\frac{3}{4})} $$
+
+			y como $X$ es una variable aleatoria continua, se sigue:
+				$$ 1 - F_X^{(\frac{3}{4})} = 1 - \int_{0}^{\frac{3}{4}} 6x(1-x) dx
+				   = 1 - [\int_{0}^{\frac{3}{4}} 6x - 6x^2 dx]  $$
+				$$ = 1 - [\int_{0}^{\frac{3}{4}} 6x dx - \int_{0}^{\frac{3}{4}} 6x^2 dx ] $$
+				$$ = 1 - [3 x^2 \Big|_0^\frac{3}{4} - 2 x^3 \Big|_0^\frac{3}{4}]
+				   = 1 - [3 \cdot \frac{9}{16} - 2  \cdot \frac{27}{64} ]
+				   = 1 - [\frac{27}{16} - \frac{54}{64} ] $$
+				$$ = 1 - [\frac{108}{64} - \frac{54}{64} ]
+				   = 1 - [\frac{108}{64} - \frac{54}{64} ]
+				   = 1 - [\frac{54}{64}] $$
+				$$ = \frac{64}{64} - \frac{54}{64}  = \frac{10}{54} = \frac{5}{32}$$
+
+			Ahora, para $P(X < \frac{1}{4})$:
+				$$ P(X < \frac{1}{4}) = \lim_{h\to 0^+} F_Y^{(\frac{1}{4} - h)}
+				   =  \lim_{h\to 0^+} \int_{0}^{(\frac{1}{4} - h)} 6x - 6x^2 dx $$
+				$$ =  \lim_{h\to 0^+} [3 x^2 \Big|_0^{(\frac{1}{4} - h)} - 2 x^3 \Big|_0^{(\frac{1}{4} - h)}] $$
+				$$ =  \lim_{h\to 0^+} [3 (\frac{1}{4} - h)^2 - 2(\frac{1}{4} - h)^3]$$
+				$$ =  \lim_{h\to 0^+} [3 (\frac{1}{4} - h)^2 - 2(\frac{1}{4} - h)^3]$$
+				$$ =  \lim_{h\to 0^+} [\frac{16h^3+12h^2-9h}{8} + \frac{5}{32}]$$
+				$$ =  \frac{16(0)^3+12(0)^2-9(0)}{8} + \frac{5}{32} = \frac{5}{32}$$
+
+			Así, concluimos que :
+				$$ P[(X > \frac{3}{4}) \cup (X < \frac{1}{4})]
+				 = P(X > \frac{3}{4}) + P(X < \frac{1}{4})
+				 = \frac{5}{32} + \frac{5}{32} = \frac{10}{32} = \frac{5}{16}$$
 		}
-		
+
 		%Ejercicio 10
 		\item {
 			Suponga que se selecciona aleatoriamente un punto $z$ del cuadrado con
@@ -376,7 +543,7 @@ Entonces sí es una variable aleatoria. Entonces en conclusión $X_{2}$ es una v
 				}
 			\end{enumerate}
 		}
-		
+
 		%Ejercicio 11
 		\item {
 			Una póliza de seguros cubre las reclamaciones médicas de los empleados
@@ -410,7 +577,7 @@ Entonces sí es una variable aleatoria. Entonces en conclusión $X_{2}$ es una v
 			Entonces, la probabilidad de que $V$ exceda los 10,000 es un poco
 			menos del 40\%.
 			}
-			
+
 		%Ejercicio 12
 		\item {
 			Una urna contiene 5 bolas rojas y 5 bolas azules. Se realiza un juego
@@ -480,31 +647,31 @@ Entonces sí es una variable aleatoria. Entonces en conclusión $X_{2}$ es una v
 
 		}
 
-		%Ejercicio 13		
+		%Ejercicio 13
 		\item {
 			Sea $X$ una variable aleatoria con función de densidad dada por
 			\[f_X(x) = \frac{1}{2}e^{-|x|}\mathbb{I}_{\mathbb{R}}(x)\]
 			Si $Y = X^2$, encuentre la función de distribución acumulada de $Y$.
-			
+
 			Para obtener la función de distribución acumulada usamos la ley de estadística inconsciente y tenemos que:
-			
+
 		$F_{x}(y) = P(Y \leq y) = P(X^2\leq y) = P(-\sqrt{y} \leq X \leq \sqrt{y})$	\\
-					
+
 			Ya que es una variable aleatoria continua, y basándonos en cómo definimos la función de distribución arriba, el resultado sería la siguiente integral:
-			$\int_{-\sqrt{y}}^{\sqrt{y}} \frac{1}{2}e^{-|x|}$			
-			
+			$\int_{-\sqrt{y}}^{\sqrt{y}} \frac{1}{2}e^{-|x|}$
+
 			Desarrollamos:
 			 \[
                \int_{-\sqrt{y}}^{\sqrt{y}} \frac{1}{2}e^{-|x|}
                 =
-                 \int_{-\sqrt{y}}^{0} \frac{1}{2}e^{x} 
+                 \int_{-\sqrt{y}}^{0} \frac{1}{2}e^{x}
                  +
                  \int_{0}^{\sqrt{y}} \frac{1}{2}e^{-x}
                 =
                  \left[\frac{1}{2}e^{x}\right]\Big|_{-\sqrt{y}}^{0}
                  +
                  \left[-\frac{1}{2}e^{-x}\right]\Big|_{0}^{\sqrt{y}}
-             \]        
+             \]
              \[
                            =
                 \left(\frac{1}{2} - \frac{1}{2}e^{-\sqrt{y}}\right)
@@ -512,12 +679,12 @@ Entonces sí es una variable aleatoria. Entonces en conclusión $X_{2}$ es una v
                 \left(- \frac{1}{2}e^{-\sqrt{y}} + \frac{1}{2}\right)
                 =
                 1 - e^{-\sqrt{y}}
-            \]        
-            
+            \]
+
             De ahí,\\
             $F_{x}(y) =  1 - e^{-\sqrt{y}}$\\
 		}
-		
+
 		%Ejercicio 14
 		\item {
 			Sea $X$ una variable aleatoria con función de densidad dada por
@@ -528,27 +695,27 @@ Entonces sí es una variable aleatoria. Entonces en conclusión $X_{2}$ es una v
 						 \end{cases}
 			\]
 			Encuentre $P(X \leq \frac{2}{3}|X > \frac{1}{3})$.\\
-			
+
 			Tenemos una probabilidad condicional y vemos que:\\
-			
+
 			 $P(X \leq \frac{2}{3}|X > \frac{1}{3}) = \frac{P((X \leq \frac{2}{3}) \cap (X > \frac{1}{3}))}{P(X > \frac{1}{3})}$\\
-			 
+
 			 Sabemos que la variable es continua, y estamos evaluando en el caso donde está entre $ 0 < x < 1$ ya que es el caso donde está valuada,  así que:\\
-			 
+
 			 $P((X \leq \frac{2}{3}) \cap (X > \frac{1}{3})) = \int_{\frac{1}{3}}^{\frac{2}{3}} 4x^3 dx$ \\
-			 
+
 			 Ya que en el caso donde estamos valuando, el límite está en 1, podemos tener lo siguiente:
 			 $P(X > \frac{1}{3}) = \int_{\frac{1}{3}}^{1} 4x^3 dx$\\
-			 
+
 			 Desarrollamos:\\
-			 $P((X \leq \frac{2}{3}) \cap (X > \frac{1}{3})) = 
+			 $P((X \leq \frac{2}{3}) \cap (X > \frac{1}{3})) =
 			 \left[x^4\right]\Big|_{\frac{1}{3}}^{\frac{2}{3}}=
 			 \frac{16}{81} - \frac{1}{81} = \frac{5}{27}$\\
-			 
-			 $P(X > \frac{1}{3}) = 
+
+			 $P(X > \frac{1}{3}) =
 			 \left[x^4\right]\Big|_{\frac{1}{3}}^{1}=
 			 1 - \frac{1}{81} = \frac{80}{81}$\\
-			 
+
 			 Entonces,\\
 			 $P(X \leq \frac{2}{3}|X > \frac{1}{3})
 			 = \frac{\frac{5}{27}}{\frac{80}{81}}
