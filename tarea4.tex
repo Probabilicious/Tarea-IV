@@ -420,8 +420,11 @@ Entonces sí es una variable aleatoria. Entonces en conclusión $X_{2}$ es una v
 						Notemos ahora:
 						$$ P(Y \leq 3) = F_Y^{(3)} = \frac{6}{10} $$
 						$$ P(Y < 1) = \lim_{h\to 0^+} F_Y^{(1 - h)}
-						 = \lim_{h\to 0^+} \sum_{\{y | y \leq 1 - h \}} f_Y^{(y)}
-						 = \lim_{h\to 0^+} 0 = 0 $$
+						 = \lim_{h\to 0^+} \sum_{\{y | y \leq 1 - h \}} f_Y^{(y)} $$
+
+						y como la suma se realiza sobre un conjunto vacío, se sigue:
+
+						$$ \lim_{h\to 0^+} \sum_{\{y | y \leq 1 - h \}} f_Y^{(y)} = \lim_{h\to 0^+} 0 = 0 $$
 
 						De esta manera concluimos:
 						$$ P(Y < 1 | Y \leq 3) = \frac{P(Y < 1)}{P(Y \leq 3)}
